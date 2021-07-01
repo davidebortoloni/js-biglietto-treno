@@ -1,7 +1,16 @@
-var kilometres = prompt('Inserisca quanti km dovranno essere percorsi');
-var userAge = prompt('Inserisca la sua età');
-var priceConstant = 0.21;
+var kilometres = prompt('Inserire quanti km dovranno essere percorsi');
+if (isNaN(kilometres) || kilometres <= 0) {
+    alert('Inserire un numero di km valido');
+    window.location.reload();
+} else {
+    var userAge = prompt('Inserire l\'età');
+    if (isNaN(userAge) || userAge <= 0) {
+        alert('Inserire un\'età valida');
+        window.location.reload();
+    }
+}
 
+var priceConstant = 0.21;
 var price = kilometres * priceConstant;
 
 if (userAge < 18) {
