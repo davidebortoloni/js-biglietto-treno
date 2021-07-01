@@ -7,12 +7,10 @@ var price = kilometres * priceConstant;
 if (userAge < 18) {
     price = price - (price / 100 * 20);
     price = Math.round(price * 100) / 100;
-    console.log(price);
 }
 if (userAge >= 65) {
     price = price - (price / 100 * 40);
     price = Math.round(price * 100) / 100;
-    console.log(price);
 }
 
 messageId = document.getElementById('ticket-price');
